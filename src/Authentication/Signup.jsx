@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Signup = () => {
 	const { createUser } = useContext(AuthContext);
+
 	const handleUser = (event) => {
 		event.preventDefault();
 		const form = event.target;
@@ -19,6 +20,7 @@ const Signup = () => {
 			})
 			.catch((error) => console.log(error.message));
 	};
+
 	return (
 		<section className="flex justify-center items-center h-screen bg-gray-800">
 			<form
