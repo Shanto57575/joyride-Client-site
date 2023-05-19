@@ -1,11 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Signup = () => {
 	const { createUser } = useContext(AuthContext);
+	const [success, setSuccess] = useState("");
+	const [error, setError] = useState("");
 
 	const handleUser = (event) => {
+		setSuccess("");
+		setError(" ");
+
 		event.preventDefault();
 		const form = event.target;
 		const name = form.name.value;
@@ -15,10 +20,11 @@ const Signup = () => {
 		const photo = form.photo.value;
 		console.log(name, email, password, confirm, photo);
 		createUser(email, password)
-			.then((result) => {
-				console.log(result.user);
+			.then(() => {
+				setSuccess("Accounted created Successfully!!!");
+				form.reset();
 			})
-			.catch((error) => console.log(error.message));
+			.catch((error) => setError(error.message));
 	};
 
 	return (
@@ -87,12 +93,9 @@ const Signup = () => {
 							<Link to="/login">login</Link>
 						</span>
 					</p>
-					{/* <div>
-						<a className="text-sm text-blue-600 hover:underline" href="#">
-							Forgot password?
-						</a>
-					</div> */}
 				</div>
+				<p className="text-center text-green-600 font-bold">{success}</p>
+				<p className="text-center text-red-600 font-bold">{error}</p>
 			</form>
 		</section>
 	);
