@@ -1,12 +1,14 @@
 const Gallery = () => {
 	return (
 		<div>
-			<h1 className="text-orange-500 font-extrabold font-serif mt-20 mb-10 text-4xl text-center">
-				Immerse in Wheels:{" "}
-				<span className="text-stone-600 font-extrabold">
+			<div className=" mt-20 mb-10 text-4xl text-center">
+				<h1 className=" text-cyan-500 font-extrabold font-serif">
+					Immerse in Wheels,
+				</h1>
+				<h1 className="text-stone-600 text-base mt-2 font-bold">
 					A Toy Car Journey for Kids
-				</span>
-			</h1>
+				</h1>
+			</div>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 				<img
 					className="h-[180px] max-w-full rounded-lg"

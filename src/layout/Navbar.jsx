@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/car.png";
 const Navbar = () => {
 	return (
-		<div className="navbar bg-base-100 font-serif text-lg">
+		<div className="navbar font-serif text-lg ">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -51,7 +51,8 @@ const Navbar = () => {
 				<p className="flex items-center">
 					<img className="w-32" src={logo} alt="" />
 					<h3 className="font-extrabold lg:text-4xl ">
-						Joy<span className="text-orange-500">Ride</span>{" "}
+						Joy
+						<span className=" text-cyan-500">Ride</span>{" "}
 					</h3>
 				</p>
 			</div>
