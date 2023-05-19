@@ -1,0 +1,85 @@
+[
+    {
+     "id":1,   
+    "picture": "https://i.postimg.cc/zDd28LcD/car1.jpg",
+    "rating": 4,
+    "price": 244,
+    "name": "Tesla Model S",
+    "description": "The Tesla Model S is a luxury all-electric sedan known for its impressive performance and long-range capabilities. With its sleek design and advanced features, it offers a comfortable and technologically advanced driving experience. The Model S has gained popularity for its fast acceleration, cutting-edge autopilot capabilities, and over-the-air software updates that enhance its functionality over time.",
+     "category":"Bus"
+    },
+    {
+     "id":2,   
+    "picture": "https://i.postimg.cc/DwcBp8LK/car2.jpg",
+    "rating": 3,
+    "price": 308,
+    "name": "Toyota Camry",
+    "description": "The Toyota Camry is a reliable and fuel-efficient midsize sedan that has been a popular choice for many drivers. Known for its comfortable ride, spacious interior, and excellent safety features, the Camry offers a smooth and enjoyable driving experience. With its reputation for durability and long-term reliability, the Camry is often praised for its value and low maintenance costs.",
+     "category":"Bus"
+    },
+    {
+     "id":3,   
+    "picture": "https://i.postimg.cc/FRVSkGnM/car36.jpg",
+    "rating": 4,
+    "price": 452,
+    "name": "BMW 3 Series",
+    "description": "The BMW 3 Series is a luxury compact sedan that combines sporty performance with elegance and sophistication. With its powerful engine options, precise handling, and upscale interior, the 3 Series delivers a thrilling driving experience. Known for its cutting-edge technology and refined styling, this car offers a balance of comfort and sportiness, making it a popular choice among car enthusiasts.",
+     "category":"Bus"
+    },
+    {
+     "id":4,   
+    "picture": "https://i.postimg.cc/BnfJRsvC/car34.jpg",
+    "rating": 5,
+    "price": 234,
+    "name": "Honda Civic",
+    "description": "The Honda Civic is a compact car that has long been praised for its reliability, fuel efficiency, and practicality. With its comfortable cabin, user-friendly features, and agile handling, the Civic offers a smooth and enjoyable ride. Known for its strong resale value and low ownership costs, this car is a popular choice for individuals and families seeking a dependable and cost-effective transportation option.",
+     "category":"Sports Car"
+    },
+    {
+     "id":5,   
+    "picture": "https://i.postimg.cc/SxXcCRdr/car5.jpg",
+    "rating": 4,
+    "price": 356,
+    "name": "Ford Mustang",
+    "description": "The Ford Mustang is an iconic American muscle car known for its powerful performance and distinctive design. With its range of engine options, including high-performance variants, the Mustang offers thrilling acceleration and an exhilarating driving experience. Beyond its performance capabilities, the Mustang also provides modern technology features and a comfortable interior, making it a popular choice for those seeking a blend of style and power.",
+     "category":"Sports Car"
+    },
+    {
+     "id":6,   
+    "picture": "https://i.postimg.cc/nrjnTyP6/car6.jpg",
+    "rating": 3,
+    "price": 239,
+    "name": "Nissan Rogue",
+    "description": "The Nissan Rogue is a compact SUV that offers a practical and versatile driving experience. With its comfortable seating, ample cargo space, and advanced safety features, the Rogue is well-suited for individuals and families alike. Known for its fuel efficiency and user-friendly technology, this SUV provides a smooth and convenient ride for daily commuting and weekend adventures.",
+     "category":"Sports Car"
+    },
+    {
+     "id":7,   
+    "picture": "https://i.postimg.cc/dtRVXY1Y/car7.jpg",
+    "rating": 3,
+    "price": 168,
+    "name": "Volkswagen Golf",
+    "description": "The Volkswagen Golf is a compact hatchback known for its solid build quality, refined driving dynamics, and versatile interior. With its comfortable seats, well-designed cabin, and responsive handling, the Golf offers a balanced and enjoyable driving experience. Renowned for its fuel efficiency and European styling, this car is favored by those seeking a practical yet fun-to-drive vehicle.",
+     "category":"Truck"
+    },
+    {
+     "id":8,   
+    "picture": "https://i.postimg.cc/d3xz1nJv/car8.jpg",
+    "rating": 4,
+    "price": 389,
+    "name": "Mercedes-Benz C-Class",
+    "description": "The Mercedes-Benz C-Class is a luxury compact sedan that combines elegance, performance, and cutting-edge technology. With its sleek design, refined interior, and advanced features, the C-Class offers a premium driving experience. Known for its comfortable ride, powerful engine options, and sophisticated infotainment system, this car embodies luxury and craftsmanship.",
+     "category":"Truck"
+    },
+    {
+     "id":9,   
+    "picture": "https://i.postimg.cc/Y2T7tq0F/car9.jpg",
+    "rating": 5,
+    "price": 499,
+    "name": "Subaru Outback",
+    "description": "The Subaru Outback is a versatile and rugged crossover SUV that excels in both on-road and off-road adventures. With its spacious interior, standard all-wheel drive, and impressive ground clearance, the Outback is ready for any terrain or weather condition. Known for its reliability, safety features, and practicality, this car appeals to outdoor enthusiasts and families seeking a capable and dependable vehicle.",
+     "category":"Truck"
+    }
+]
+    
+    

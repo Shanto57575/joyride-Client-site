@@ -1,7 +1,7 @@
 const Gallery = () => {
 	return (
 		<div>
-			<h1 className="text-orange-500 font-serif mt-20 mb-10 text-4xl text-center">
+			<h1 className="text-orange-500 font-extrabold font-serif mt-20 mb-10 text-4xl text-center">
 				Immerse in Wheels:{" "}
 				<span className="text-stone-600 font-extrabold">
 					A Toy Car Journey for Kids
