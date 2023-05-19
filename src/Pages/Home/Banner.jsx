@@ -7,7 +7,7 @@ const Banner = () => {
 				<div className="p-5 lg:px-20 lg:pt-20">
 					<div className="text-2xl lg:text-6xl top-1/2 font-serif space-y-2">
 						<p className="text-base my-3">
-							Welcome to,{" "}
+							Welcome To,{" "}
 							<span className="text-2xl ml-2 text-orange-500  font-extrabold">
 								joy
 							</span>
