@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import { Link } from "react-router-dom";
 const Banner = () => {
 	return (
 		<div className="lg:flex text-blue-950 bg-gradient-to-r from-cyan-100 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center mr-2 mb-2">
@@ -13,15 +14,17 @@ const Banner = () => {
 						Where Kids Rule the Roads of Fun
 					</div>
 					<div className="flex gap-5 my-5 w-full mx-auto">
+						<Link to="/about">
+							<button
+								type="button"
+								className="text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-sky-300 dark:focus:ring-sky-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+							>
+								About us
+							</button>
+						</Link>
 						<button
 							type="button"
-							className="text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-sky-300 dark:focus:ring-sky-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
-						>
-							About us
-						</button>
-						<button
-							type="button"
-							className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm p-4 text-center mr-2 mb-2"
+							className="text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-3 py-2 text-center mr-2 mb-2"
 						>
 							Learn More
 						</button>

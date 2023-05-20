@@ -5,7 +5,11 @@ import { Navigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const PrivateRoutes = ({ children }) => {
-	const { user } = useContext(AuthContext);
+	const { user, loading } = useContext(AuthContext);
+
+	if (loading) {
+		return <h1>....Loading</h1>;
+	}
 
 	if (user) {
 		return children;

@@ -1,7 +1,7 @@
 import ShopCategory from "../Shop/ShopCategory";
-import Banner from "../Banner/Banner";
+import Banner from "./Banner";
 import Gallery from "./Gallery";
-import Reviews from "../Reviews";
+import Reviews from "./Reviews";
 
 const Home = () => {
 	return (

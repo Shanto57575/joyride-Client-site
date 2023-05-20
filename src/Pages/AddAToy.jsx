@@ -1,14 +1,21 @@
+import { useContext } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthProvider";
+
 const AddAToy = () => {
+	const { user } = useContext(AuthContext);
+	console.log(user.displayName);
 	const handleAddAToy = (event) => {
 		event.preventDefault();
 		const form = event.target;
-		const name = form.name.value;
+		const name = user.displayName;
 		const email = form.email.value;
 		const price = form.price.value;
-		const rating = form.name.value;
+		const rating = form.rating.value;
 		const details = form.details.value;
 		const quantity = form.quantity.value;
 		const photo = form.photo.value;
+		const toyname = form.toyname.value;
 		const category = form.vehicle.value;
 		const addAll = {
 			name,
@@ -19,8 +26,30 @@ const AddAToy = () => {
 			details,
 			photo,
 			category,
+			toyname,
 		};
+
 		console.log(addAll);
+
+		fetch("http://localhost:5000/cars", {
+			method: "POST",
+			headers: {
+				"content-type": "application/json",
+			},
+			body: JSON.stringify(addAll),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				if (data.insertedId) {
+					Swal.fire({
+						icon: "success",
+						title: "Successful...",
+						text: "Data added Successfully!",
+					});
+				}
+			});
+		form.reset();
 	};
 	return (
 		<div className="border p-10 my-5 bg-cyan-900 rounded-lg text-white">
@@ -37,7 +66,6 @@ const AddAToy = () => {
 							className="appearance-none block w-full bg-gray-200 text-black border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							id="grid-first-name"
 							type="text"
-							name="name"
 							placeholder="Seller Name"
 						/>
 					</div>
@@ -49,7 +77,7 @@ const AddAToy = () => {
 							className="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 							id="grid-last-name"
 							name="email"
-							type="text"
+							type="email"
 							placeholder="Seller Email"
 						/>
 					</div>
@@ -64,7 +92,7 @@ const AddAToy = () => {
 							id="grid-first-name"
 							name="price"
 							type="text"
-							placeholder="$Price"
+							placeholder="Price"
 						/>
 					</div>
 					<div className="w-full md:w-1/2 px-3">
@@ -100,14 +128,26 @@ const AddAToy = () => {
 						<input
 							className="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 							id="grid-last-name"
-							type="text"
+							type="url"
 							name="photo"
 							placeholder="Photo Url"
 						/>
 					</div>
 				</div>
 				<div className="flex flex-wrap -mx-3 mb-6">
-					<div className="w-full px-3">
+					<div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+						<label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
+							Toy Name
+						</label>
+						<input
+							className="appearance-none block w-full bg-gray-200 text-black border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+							id="grid-first-name"
+							type="text"
+							name="toyname"
+							placeholder="Toy Name"
+						/>
+					</div>
+					<div className="w-full md:w-1/2 px-3">
 						<label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
 							Description
 						</label>

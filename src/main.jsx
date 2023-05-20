@@ -8,11 +8,12 @@ import Signup from "./Authentication/Signup";
 import AuthProvider from "./Provider/AuthProvider";
 import Home from "./Pages/Home/Home";
 import Blog from "./Pages/Blog";
-import AllToys from "./Pages/AllToys";
 import AddAToy from "./Pages/AddAToy";
 import Mytoys from "./Pages/Mytoys";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import Error from "./Pages/Error";
+import About from "./Pages/Home/About";
+import AllToys from "./Pages/AllToys/AllToys";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				path: "/login",
 				element: <Login></Login>,
+			},
+			{
+				path: "/about",
+				element: <About></About>,
 			},
 			{
 				path: "/signup",

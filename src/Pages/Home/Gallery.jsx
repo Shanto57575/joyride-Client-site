@@ -9,7 +9,7 @@ const Gallery = () => {
 					A Toy Car Journey for Kids
 				</h1>
 			</div>
-			<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+			<div className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7 hover:animate-pulse">
 				<img
 					className="h-[180px] md:w-[300px] max-w-full rounded-lg"
 					src="https://i.postimg.cc/bwY0FjJ4/car1.jpg"
