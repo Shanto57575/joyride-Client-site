@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 const Banner = () => {
 	return (
 		<div className="lg:flex text-blue-950 bg-gradient-to-r from-cyan-100 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center mr-2 mb-2">
-			<div className="lg:w-1/2 text-center lg:text-left">
+			<div className="w-full mx-auto lg:w-1/2 text-center lg:text-left">
 				<div className="p-5 lg:px-20 lg:pt-20">
 					<div className="text-2xl lg:text-6xl top-1/2 font-serif space-y-2">
 						<p className="text-base my-3">
@@ -28,7 +28,7 @@ const Banner = () => {
 					</div>{" "}
 				</div>
 			</div>
-			<div className="lg:w-1/2">
+			<div className="w-full mx-auto lg:w-1/2">
 				<Marquee speed={300} pauseOnHover={true}>
 					<img
 						className="lg:h-[450px]"

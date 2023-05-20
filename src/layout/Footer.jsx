@@ -1,12 +1,13 @@
 import logo from "../assets/car.png";
 const Footer = () => {
 	return (
-		<footer className="footer lg:flex items-center justify-around p-7 bg-neutral text-white">
+		<footer className="footer lg:flex items-center rounded-lg justify-around p-7 bg-neutral text-white bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-800 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800">
 			<div>
 				<p className="flex items-center">
 					<img className="w-32" src={logo} alt="" />
-					<h3 className="font-extrabold lg:text-xl ">
-						Joy<span className="text-orange-500">Ride</span>{" "}
+					<h3 className="font-extrabold lg:text-4xl ">
+						Joy
+						<span className=" text-cyan-200">Ride</span>{" "}
 					</h3>
 				</p>{" "}
 				<p>
@@ -63,10 +64,10 @@ const Footer = () => {
 				<div className="relative">
 					<input
 						type="text"
-						placeholder="username@site.com"
-						className="input input-bordered w-full pr-16"
+						placeholder="Email"
+						className="input input-bordered w-full pr-16 text-black"
 					/>
-					<button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+					<button className="btn  absolute top-0 right-0 rounded-l-none">
 						Subscribe
 					</button>
 				</div>

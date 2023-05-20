@@ -2,12 +2,12 @@
 const Blog = () => {
 	return (
 		<div className="space-y-6 mb-20">
-			<h1 className="text-center font-serif font-extrabold text-xl lg:text-3xl underline">
-				Important <span className="text-orange-500">FaQ</span>'s!!!
+			<h1 className="text-center text-cyan-900 font-serif font-extrabold text-xl lg:text-3xl underline">
+				Important <span className="text-cyan-600">FaQ</span>'s!!!
 			</h1>
 			<div
 				tabIndex={0}
-				className="collapse collapse-plus border border-base-300 rounded-box bg-stone-700 hover:bg-slate-600 p-3 text-white"
+				className="collapse collapse-plus border border-base-300 rounded-box bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-800 p-3 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium  text-sm text-center text-white mr-2 mb-2"
 			>
 				<div className="collapse-title text-xl font-medium">
 					What is an access token and refresh token? How do they work and where
@@ -25,7 +25,7 @@ const Blog = () => {
 			</div>
 			<div
 				tabIndex={0}
-				className="collapse collapse-plus border border-base-300 rounded-box bg-stone-700 hover:bg-slate-600 p-3 text-white"
+				className="collapse collapse-plus border border-base-300 rounded-box bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-800 p-3 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium  text-sm text-center text-white mr-2 mb-2"
 			>
 				<div className="collapse-title text-xl font-medium">
 					Compare SQL and NoSQL databases?
@@ -52,7 +52,7 @@ const Blog = () => {
 			</div>
 			<div
 				tabIndex={0}
-				className="collapse collapse-plus border border-base-300 rounded-box bg-stone-700 hover:bg-slate-600 p-3 text-white"
+				className="collapse collapse-plus border border-base-300 rounded-box bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-800 p-3 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium  text-sm text-center text-white mr-2 mb-2"
 			>
 				<div className="collapse-title text-xl font-medium">
 					What is express js? What is Nest JS?
@@ -77,7 +77,7 @@ const Blog = () => {
 			</div>
 			<div
 				tabIndex={0}
-				className="collapse collapse-plus border border-base-300 rounded-box bg-stone-700 hover:bg-slate-600 p-3 text-white"
+				className="collapse collapse-plus border border-base-300 rounded-box bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-800 p-3 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium  text-sm text-center text-white mr-2 mb-2"
 			>
 				<div className="collapse-title text-xl font-medium">
 					What is MongoDB aggregate and how does it work?
