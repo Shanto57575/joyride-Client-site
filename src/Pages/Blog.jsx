@@ -2,8 +2,8 @@
 const Blog = () => {
 	return (
 		<div className="space-y-6 mb-20">
-			<h1 className="text-center text-cyan-900 font-serif font-extrabold text-xl lg:text-3xl underline">
-				Important <span className="text-cyan-600">FaQ</span>'s!!!
+			<h1 className="text-center text-white font-serif font-extrabold text-xl lg:text-3xl underline">
+				Important <span className="text-cyan-300">FaQ</span>'s!!!
 			</h1>
 			<div
 				tabIndex={0}

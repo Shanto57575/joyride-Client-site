@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
+// import PrivateRoutes from "../../routes/PrivateRoutes";
 
 /* eslint-disable react/prop-types */
 const ShowCar = ({ car }) => {
@@ -8,7 +11,18 @@ const ShowCar = ({ car }) => {
 
 	const [modalOpen, setModalOpen] = useState(false);
 
+	const { user } = useContext(AuthContext);
+
 	const handleDetails = () => {
+		{
+			if (!user) {
+				Swal.fire({
+					title: "Oops...",
+					text: "You need to Sign In first",
+				});
+				return;
+			}
+		}
 		setModalOpen(true);
 	};
 
@@ -28,6 +42,8 @@ const ShowCar = ({ car }) => {
 				<p className="font-serif text-lg font-bold">Price : ${price}</p>
 				<p className="font-serif text-lg font-bold">rating : {rating} stars!</p>
 				<div className="card-actions justify-end">
+					{/* <PrivateRoutes>
+					</PrivateRoutes> */}
 					<label
 						onClick={handleDetails}
 						className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"

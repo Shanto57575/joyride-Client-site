@@ -20,7 +20,7 @@ const Footer = () => {
 				</p>
 			</div>
 			<div>
-				<span className="footer-title">Social</span>
+				<span className="text-xl mb-5 font-bold text-white">Social</span>
 				<div className="grid grid-flow-col gap-4">
 					<a>
 						<svg
@@ -59,13 +59,15 @@ const Footer = () => {
 			</div>
 			<div>
 				<label className="label">
-					<span className="text-white">Enter your email address</span>
+					<span className="text-white font-bold text-base">
+						Enter your email to subscribe
+					</span>
 				</label>
 				<div className="relative">
 					<input
 						type="text"
 						placeholder="Email"
-						className="input input-bordered w-full pr-16 text-black"
+						className="input input-bordered w-full pr-16"
 					/>
 					<button className="btn  absolute top-0 right-0 rounded-l-none">
 						Subscribe

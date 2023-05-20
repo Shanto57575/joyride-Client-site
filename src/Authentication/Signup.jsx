@@ -1,16 +1,13 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const Signup = () => {
 	const { createUser } = useContext(AuthContext);
-	const [success, setSuccess] = useState("");
-	const [error, setError] = useState("");
 
 	const handleUser = (event) => {
-		setSuccess("");
-		setError(" ");
-
 		event.preventDefault();
 		const form = event.target;
 		const name = form.name.value;
@@ -19,12 +16,29 @@ const Signup = () => {
 		const confirm = form.confirm.value;
 		const photo = form.photo.value;
 		console.log(name, email, password, confirm, photo);
+
 		createUser(email, password)
-			.then(() => {
-				setSuccess("Accounted created Successfully!!!");
+			.then((result) => {
+				Swal.fire({
+					icon: "success",
+					title: "Yeah!",
+					text: "Account created Successfully!",
+				});
+				updateProfile(result.user, {
+					displayName: name,
+					photoURL: "https://i.postimg.cc/3JVMhBVg/shanto-png.jpg",
+				})
+					.then(() => {})
+					.catch(() => {});
 				form.reset();
 			})
-			.catch((error) => setError(error.message));
+			.catch((error) =>
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: error.message,
+				})
+			);
 	};
 
 	return (
@@ -94,8 +108,6 @@ const Signup = () => {
 						</span>
 					</p>
 				</div>
-				<p className="text-center text-green-600 font-bold">{success}</p>
-				<p className="text-center text-red-600 font-bold">{error}</p>
 			</form>
 		</section>
 	);

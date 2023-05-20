@@ -1,18 +1,14 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
 	const { SignIn, GoogleLogin, GithubLogin } = useContext(AuthContext);
 
-	const [success, setSuccess] = useState("");
-	const [error, setError] = useState("");
-
 	const handleLogin = (event) => {
-		setSuccess("");
-		setError(" ");
 		event.preventDefault();
 		const form = event.target;
 		const email = form.email.value;
@@ -20,26 +16,56 @@ const Login = () => {
 		console.log(email, password);
 		SignIn(email, password)
 			.then(() => {
-				setSuccess("Successfully logged In!!!");
+				Swal.fire({
+					icon: "success",
+					title: "Yeah!",
+					text: "Successfully Logged In!",
+				});
 				form.reset();
 			})
-			.catch((error) => setError(error.message));
+			.catch((error) =>
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: error.message,
+				})
+			);
 	};
 
 	const handleGoogle = () => {
 		GoogleLogin()
 			.then(() => {
-				setSuccess("Successfully logged In!!!");
+				Swal.fire({
+					icon: "success",
+					title: "Yeah!",
+					text: "Successfully Logged In!",
+				});
 			})
-			.catch((error) => setError(error.message));
+			.catch((error) =>
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: error.message,
+				})
+			);
 	};
 
 	const handleGithub = () => {
 		GithubLogin()
 			.then(() => {
-				setSuccess("Successfully logged In!!!");
+				Swal.fire({
+					icon: "success",
+					title: "Yeah!",
+					text: "Successfully Logged In!",
+				});
 			})
-			.catch((error) => setError(error.message));
+			.catch((error) =>
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: error.message,
+				})
+			);
 	};
 
 	return (
@@ -95,8 +121,6 @@ const Login = () => {
 						</span>
 					</p>
 				</div>
-				<p className="text-center text-green-600 font-bold">{success}</p>
-				<p className="text-center text-red-600 font-bold">{error}</p>
 			</div>
 		</section>
 	);
