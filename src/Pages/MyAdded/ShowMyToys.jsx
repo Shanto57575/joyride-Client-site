@@ -2,7 +2,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 /* eslint-disable react/prop-types */
-const ShowMyToys = ({ car, handleDelete }) => {
+const ShowMyToys = ({ car, handleDelete, setCars }) => {
 	const { _id, category, name, photo, price, quantity, rating, toyname } = car;
 
 	const [modalOpen, setModalOpen] = useState(false);
@@ -39,6 +39,12 @@ const ShowMyToys = ({ car, handleDelete }) => {
 						text: "Car data Updated Successfully",
 						icon: "success",
 						confirmButtonText: "Cool",
+					});
+					setCars((prevCars) => {
+						const updatedCars = prevCars.map((prevCar) => {
+							prevCar._id === _id ? updateCar : prevCar;
+						});
+						return updatedCars;
 					});
 				}
 			});
