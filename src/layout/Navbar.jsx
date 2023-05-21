@@ -46,7 +46,7 @@ const Navbar = () => {
 						<Link to="/alltoys">
 							<li>All Toys</li>
 						</Link>
-						<Link to="/mytoys">
+						<Link to={`/toys/${user?.email}`}>
 							<li>My Toys</li>
 						</Link>
 						<Link to="/addatoy">
@@ -85,7 +85,7 @@ const Navbar = () => {
 					<Link to="/alltoys">
 						<li>All Toys</li>
 					</Link>
-					<Link to="/mytoys">
+					<Link to={`/toys/${user?.email}`}>
 						<li>My Toys</li>
 					</Link>
 					<Link to="/addatoy">

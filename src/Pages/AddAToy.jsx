@@ -4,12 +4,12 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const AddAToy = () => {
 	const { user } = useContext(AuthContext);
-	console.log(user.displayName);
+
 	const handleAddAToy = (event) => {
 		event.preventDefault();
 		const form = event.target;
-		const name = user.displayName;
-		const email = form.email.value;
+		const name = user?.displayName;
+		const email = user?.email;
 		const price = form.price.value;
 		const rating = form.rating.value;
 		const details = form.details.value;

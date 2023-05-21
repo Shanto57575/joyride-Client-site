@@ -1,3 +1,4 @@
+import Offer from "../Offer";
 import ShopCategory from "../Shop/ShopCategory";
 import Banner from "./Banner";
 import Gallery from "./Gallery";
@@ -10,6 +11,7 @@ const Home = () => {
 			<Gallery></Gallery>
 			<ShopCategory></ShopCategory>
 			<Reviews></Reviews>
+			<Offer></Offer>
 		</div>
 	);
 };

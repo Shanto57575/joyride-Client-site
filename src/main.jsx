@@ -9,11 +9,11 @@ import AuthProvider from "./Provider/AuthProvider";
 import Home from "./Pages/Home/Home";
 import Blog from "./Pages/Blog";
 import AddAToy from "./Pages/AddAToy";
-import Mytoys from "./Pages/Mytoys";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import Error from "./Pages/Error";
 import About from "./Pages/Home/About";
 import AllToys from "./Pages/AllToys/AllToys";
+import Mytoys from "./Pages/MyAdded/Mytoys";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -41,23 +41,25 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/alltoys",
-				element: (
-					<PrivateRoutes>
-						<AllToys></AllToys>
-					</PrivateRoutes>
-				),
+				element: <AllToys></AllToys>,
 			},
 			{
-				path: "/mytoys",
+				path: "/toys/:email",
 				element: (
 					<PrivateRoutes>
 						<Mytoys></Mytoys>
 					</PrivateRoutes>
 				),
+				loader: ({ params }) =>
+					fetch(`http://localhost:5000/cars/${params.email}`),
 			},
 			{
 				path: "/addatoy",
-				element: <AddAToy></AddAToy>,
+				element: (
+					<PrivateRoutes>
+						<AddAToy></AddAToy>
+					</PrivateRoutes>
+				),
 			},
 		],
 	},

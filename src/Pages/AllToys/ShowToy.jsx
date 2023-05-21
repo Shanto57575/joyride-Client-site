@@ -1,25 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 /* eslint-disable react/prop-types */
 const ShowToy = ({ car }) => {
+	const { user } = useContext(AuthContext);
 	console.log(car);
-	const {
-		category,
-		details,
-		// email,
-		name,
-		photo,
-		price,
-		quantity,
-		rating,
-		toyname,
-	} = car;
+
+	const { category, details, name, photo, price, quantity, rating, toyname } =
+		car;
 
 	const [modalOpen, setModalOpen] = useState(false);
 
 	// const { user } = useContext(AuthContext);
 
 	const handleDetails = () => {
+		if (!user) {
+			Swal.fire({
+				title: "Oops...",
+				text: "You need to Sign In first",
+			});
+			return;
+		}
 		setModalOpen(true);
 	};
 
@@ -45,7 +47,6 @@ const ShowToy = ({ car }) => {
 			<td className="text-center">{quantity}</td>
 			<td>{rating}</td>
 			<th>
-				{/* <button className="btn btn-ghost btn-xs">details</button> */}
 				<label
 					onClick={handleDetails}
 					className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
@@ -53,7 +54,7 @@ const ShowToy = ({ car }) => {
 				>
 					View Details
 				</label>
-				{modalOpen && (
+				{modalOpen && user && (
 					<div>
 						<input type="checkbox" id="my-modal-5" className="modal-toggle" />
 						<div className="modal text-left">
