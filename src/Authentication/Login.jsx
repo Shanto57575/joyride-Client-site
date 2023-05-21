@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
@@ -7,6 +7,11 @@ import Swal from "sweetalert2";
 
 const Login = () => {
 	const { SignIn, GoogleLogin, GithubLogin } = useContext(AuthContext);
+
+	const navigate = useNavigate();
+	const location = useLocation();
+
+	const from = location?.state?.pathname || "/";
 
 	const handleLogin = (event) => {
 		event.preventDefault();
@@ -21,6 +26,7 @@ const Login = () => {
 					title: "Yeah!",
 					text: "Successfully Logged In!",
 				});
+				navigate(from, { replace: true });
 				form.reset();
 			})
 			.catch((error) =>
@@ -40,6 +46,7 @@ const Login = () => {
 					title: "Yeah!",
 					text: "Successfully Logged In!",
 				});
+				navigate(from, { replace: true });
 			})
 			.catch((error) =>
 				Swal.fire({
@@ -58,6 +65,7 @@ const Login = () => {
 					title: "Yeah!",
 					text: "Successfully Logged In!",
 				});
+				navigate(from, { replace: true });
 			})
 			.catch((error) =>
 				Swal.fire({

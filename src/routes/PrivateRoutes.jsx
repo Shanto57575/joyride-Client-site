@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const PrivateRoutes = ({ children }) => {
 	const { user, loading } = useContext(AuthContext);
+
+	const location = useLocation();
 
 	if (loading) {
 		return (
@@ -43,19 +45,17 @@ const PrivateRoutes = ({ children }) => {
 	}
 	if (!user) {
 		Swal.fire({
-			title: "You need to Sign in first",
-			icon: "warning",
-			showCancelButton: true,
-			confirmButtonColor: "#3085d6",
-			cancelButtonColor: "#d33",
-			confirmButtonText: "Sign In",
-			// eslint-disable-next-line no-unused-vars
-		}).then((result) => {
-			// if (result.isConfirmed) {
-			// 	// Swal.fire("Deleted!", "Your file has been deleted.", "success");
-			// }
+			icon: "error",
+			title: "Oops...",
+			text: "You need to Login first!!",
 		});
-		return <Navigate to="/login"></Navigate>;
+		return (
+			<Navigate
+				to="/login"
+				state={{ from: location }}
+				replace={true}
+			></Navigate>
+		);
 	}
 };
 
