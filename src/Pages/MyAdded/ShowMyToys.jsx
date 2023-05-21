@@ -22,14 +22,14 @@ const ShowMyToys = ({ car, handleDelete }) => {
 		const quantity = form.quantity.value;
 		const details = form.details.value;
 
-		const allCars = { price, quantity, details };
+		const updateCar = { ...car, price, quantity, details };
 
 		fetch(`http://localhost:5000/cars/${_id}`, {
 			method: "PUT",
 			headers: {
 				"content-type": "application/json",
 			},
-			body: JSON.stringify(allCars),
+			body: JSON.stringify(updateCar),
 		})
 			.then((res) => res.json())
 			.then((data) => {
