@@ -1,18 +1,16 @@
 import { useState } from "react";
 // import { AuthContext } from "../../Provider/AuthProvider";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import ShowMyToys from "./ShowMyToys";
 import Swal from "sweetalert2";
 
 const Mytoys = () => {
-	// const { user } = useContext(AuthContext);
-
+	const { email } = useParams();
+	console.log(email);
 	const loadedData = useLoaderData();
 	console.log(loadedData);
 	const [cars, setCars] = useState(loadedData);
 	console.log(cars);
-
-	const [deleted, setDeleted] = useState(loadedData);
 
 	const handleDelete = (_id) => {
 		console.log(_id);
@@ -34,8 +32,8 @@ const Mytoys = () => {
 						console.log(data);
 						if (data.deletedCount > 0) {
 							Swal.fire("Deleted!", "Your Coffee has been deleted.", "success");
-							const remaining = deleted.filter((car) => car._id !== _id);
-							setDeleted(remaining);
+							const remaining = cars.filter((car) => car._id !== _id);
+							setCars(remaining);
 						}
 					});
 			}
