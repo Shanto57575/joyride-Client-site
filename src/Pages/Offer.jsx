@@ -90,7 +90,7 @@ const Offer = () => {
 				</div>
 				<div className="w-full md:w-1/2">
 					<img
-						className="md:w-[500px]"
+						className="w-full py-5 md:p-7 mx-auto"
 						src="https://i.postimg.cc/jqJVSx0C/faq.jpg"
 						alt=""
 					/>
