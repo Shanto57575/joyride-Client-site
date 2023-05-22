@@ -41,7 +41,7 @@ const ShowMyToys = ({ car, handleDelete, setCars }) => {
 						confirmButtonText: "Cool",
 					});
 					setCars((prevCars) => {
-						const updatedCars = prevCars.map((prevCar) => {
+						const updatedCars = prevCars.find((prevCar) => {
 							prevCar._id === _id ? updateCar : prevCar;
 						});
 						return updatedCars;
