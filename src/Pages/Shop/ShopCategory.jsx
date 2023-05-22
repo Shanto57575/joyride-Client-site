@@ -14,13 +14,13 @@ const ShopCategory = () => {
 
 	return (
 		<div className="my-10">
-			<h1 className="text-center text-cyan-500 font-extrabold text-3xl font-serif">
+			<h1 className="text-center text-cyan-200 font-extrabold text-3xl font-serif">
 				Choose Your Category!
 			</h1>
 			<Tabs>
 				<TabList
 					className={
-						"text-center bg-cyan-500 text-white font-extrabold border-black my-5 py-2"
+						"text-center rounded-lg bg-cyan-500 text-white font-extrabold border-black my-5 py-2"
 					}
 				>
 					{" "}

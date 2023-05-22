@@ -109,13 +109,13 @@ const Login = () => {
 					<div className="flex justify-between gap-5">
 						<p
 							onClick={handleGoogle}
-							className="w-full py-4 my-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200"
+							className="cursor-pointer w-full py-4 my-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200"
 						>
 							<FaGoogle className="w-full mx-auto" />
 						</p>
 						<p
 							onClick={handleGithub}
-							className="w-full py-4 my-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200"
+							className="cursor-pointer w-full py-4 my-4 bg-blue-600 hover:bg-blue-700 rounded text-sm font-bold text-gray-50 transition duration-200"
 						>
 							<FaGithub className="w-full mx-auto" />
 						</p>

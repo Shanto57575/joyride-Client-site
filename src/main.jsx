@@ -14,6 +14,7 @@ import Error from "./Pages/Error";
 import About from "./Pages/Home/About";
 import AllToys from "./Pages/AllToys/AllToys";
 import Mytoys from "./Pages/MyAdded/Mytoys";
+import DetailsCar from "./Pages/Shop/DetailsCar";
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
 			{
 				path: "/alltoys",
 				element: <AllToys></AllToys>,
+			},
+			{
+				path: "/details/:id",
+				element: <DetailsCar></DetailsCar>,
 			},
 			{
 				path: "/toys/:email",

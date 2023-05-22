@@ -3,13 +3,13 @@ const Footer = () => {
 	return (
 		<footer className="footer lg:flex items-center rounded-lg justify-around p-7 bg-neutral text-white bg-gradient-to-r from-cyan-500 via-cyan-700 to-cyan-800 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800">
 			<div>
-				<p className="flex items-center">
+				<h3 className="flex items-center">
 					<img className="w-32" src={logo} alt="" />
-					<h3 className="font-extrabold lg:text-4xl ">
+					<p className="font-extrabold lg:text-4xl ">
 						Joy
 						<span className=" text-cyan-200">Ride</span>{" "}
-					</h3>
-				</p>{" "}
+					</p>
+				</h3>{" "}
 				<p>
 					JoyRide Industries Ltd.
 					<br />

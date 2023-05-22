@@ -57,7 +57,9 @@ const Navbar = () => {
 						</Link>
 						<div className="navbar-end">
 							{user ? (
-								<p onClick={handleLogout}>Sign Out</p>
+								<p className="cursor-pointer" onClick={handleLogout}>
+									Sign Out
+								</p>
 							) : (
 								<Link to="/login">
 									<p className="text-cyan-200">Sign In</p>
@@ -66,13 +68,13 @@ const Navbar = () => {
 						</div>
 					</ul>
 				</div>
-				<p className="flex items-center">
+				<h1 className="flex items-center">
 					<img className="w-32" src={logo} alt="" />
-					<h3 className="font-extrabold lg:text-4xl ">
+					<p className="font-extrabold lg:text-4xl ">
 						Joy
 						<span className=" text-cyan-500">Ride</span>{" "}
-					</h3>
-				</p>
+					</p>
+				</h1>
 			</div>
 			<div className="navbar-center hidden lg:flex ms-20">
 				<ul className="menu menu-horizontal px-1 gap-7 text-lg font-serif text-cyan-200  font-extrabold">
@@ -99,7 +101,7 @@ const Navbar = () => {
 			<div className="navbar-end">
 				{user ? (
 					<div className="flex items-center gap-4">
-						<p className="font-bold" onClick={handleLogout}>
+						<p className="font-bold cursor-pointer" onClick={handleLogout}>
 							Sign Out
 						</p>
 						<img
