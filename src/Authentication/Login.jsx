@@ -4,8 +4,10 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useSetTittle from "../Hooks/useSetTittle";
 
 const Login = () => {
+	useSetTittle("Sign In");
 	const { SignIn, GoogleLogin, GithubLogin } = useContext(AuthContext);
 
 	const navigate = useNavigate();

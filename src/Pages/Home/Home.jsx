@@ -1,3 +1,4 @@
+import useSetTittle from "../../Hooks/useSetTittle";
 import Offer from "../Offer";
 import ShopCategory from "../Shop/ShopCategory";
 import Banner from "./Banner";
@@ -5,6 +6,7 @@ import Gallery from "./Gallery";
 import Reviews from "./Reviews";
 
 const Home = () => {
+	useSetTittle("Home");
 	return (
 		<div>
 			<Banner></Banner>

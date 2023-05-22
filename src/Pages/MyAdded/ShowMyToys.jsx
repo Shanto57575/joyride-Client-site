@@ -2,7 +2,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 /* eslint-disable react/prop-types */
-const ShowMyToys = ({ car, handleDelete, setCars }) => {
+const ShowMyToys = ({ car, handleDelete, loadData }) => {
 	const { _id, category, name, photo, price, quantity, rating, toyname } = car;
 
 	const [modalOpen, setModalOpen] = useState(false);
@@ -24,7 +24,7 @@ const ShowMyToys = ({ car, handleDelete, setCars }) => {
 
 		const updateCar = { ...car, price, quantity, details };
 
-		fetch(`http://localhost:5000/cars/${_id}`, {
+		fetch(`https://joyride-server-shanto57575.vercel.app/cars/${_id}`, {
 			method: "PUT",
 			headers: {
 				"content-type": "application/json",
@@ -40,12 +40,7 @@ const ShowMyToys = ({ car, handleDelete, setCars }) => {
 						icon: "success",
 						confirmButtonText: "Cool",
 					});
-					setCars((prevCars) => {
-						const updatedCars = prevCars.find((prevCar) => {
-							prevCar._id === _id ? updateCar : prevCar;
-						});
-						return updatedCars;
-					});
+					loadData();
 				}
 			});
 	};

@@ -1,8 +1,10 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthProvider";
+import useSetTittle from "../Hooks/useSetTittle";
 
 const AddAToy = () => {
+	useSetTittle("Add a Toy");
 	const { user } = useContext(AuthContext);
 
 	const handleAddAToy = (event) => {
@@ -31,7 +33,7 @@ const AddAToy = () => {
 
 		console.log(addAll);
 
-		fetch("http://localhost:5000/cars", {
+		fetch("https://joyride-server-shanto57575.vercel.app/cars", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",

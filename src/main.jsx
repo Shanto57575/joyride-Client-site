@@ -49,14 +49,16 @@ const router = createBrowserRouter([
 				element: <DetailsCar></DetailsCar>,
 			},
 			{
-				path: "/toys/:email",
+				path: "/toys",
 				element: (
 					<PrivateRoutes>
 						<Mytoys></Mytoys>
 					</PrivateRoutes>
 				),
-				loader: ({ params }) =>
-					fetch(`http://localhost:5000/cars/${params.email}`),
+				// loader: (data) => {
+				// 	const { params } = data;
+				// 	console.log(data, params);
+				// },
 			},
 			{
 				path: "/addatoy",

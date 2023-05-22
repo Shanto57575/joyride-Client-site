@@ -41,7 +41,7 @@ const DetailsCar = () => {
 					<p className="text-xl">
 						<span className="text-cyan-400">rating :</span> {details.rating}
 					</p>
-					<p className="text-lg text-justify">{details.description}</p>
+					<p className="text-lg">{details.description}</p>
 				</div>
 			</div>
 		</div>

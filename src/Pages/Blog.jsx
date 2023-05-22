@@ -1,5 +1,9 @@
+import useSetTittle from "../Hooks/useSetTittle";
+
 /* eslint-disable react/no-unescaped-entities */
 const Blog = () => {
+	useSetTittle("Blog");
+
 	return (
 		<div className="space-y-6 mb-20">
 			<h1 className="text-center text-white font-serif font-extrabold text-xl lg:text-3xl underline">
