@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import useSetTittle from "../../Hooks/useSetTittle";
+
 const About = () => {
+	useSetTittle("About");
 	return (
 		<div className="bg-cyan-900 py-12 mb-20">
 			<div className="container mx-auto px-10">
