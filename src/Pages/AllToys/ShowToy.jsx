@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const ShowToy = ({ car }) => {
 	const { user } = useContext(AuthContext);
 	console.log(car);
+	const location = useLocation();
 
 	const { category, details, name, photo, price, quantity, rating, toyname } =
 		car;
