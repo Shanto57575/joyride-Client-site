@@ -55,10 +55,6 @@ const router = createBrowserRouter([
 						<Mytoys></Mytoys>
 					</PrivateRoutes>
 				),
-				// loader: (data) => {
-				// 	const { params } = data;
-				// 	console.log(data, params);
-				// },
 			},
 			{
 				path: "/addatoy",

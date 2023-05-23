@@ -57,7 +57,7 @@ const Navbar = () => {
 						</Link>
 						<div className="navbar-end">
 							{user ? (
-								<p className="cursor-pointer" onClick={handleLogout}>
+								<p className="cursor-pointer text-sm" onClick={handleLogout}>
 									Sign Out
 								</p>
 							) : (
@@ -70,7 +70,7 @@ const Navbar = () => {
 				</div>
 				<h1 className="flex items-center">
 					<img className="w-32" src={logo} alt="" />
-					<p className="font-extrabold lg:text-4xl ">
+					<p className="font-extrabold text-sm lg:text-4xl ">
 						Joy
 						<span className=" text-cyan-500">Ride</span>{" "}
 					</p>
@@ -101,7 +101,10 @@ const Navbar = () => {
 			<div className="navbar-end">
 				{user ? (
 					<div className="flex items-center gap-4">
-						<p className="font-bold cursor-pointer" onClick={handleLogout}>
+						<p
+							className="font-bold cursor-pointer text-sm"
+							onClick={handleLogout}
+						>
 							Sign Out
 						</p>
 						<img

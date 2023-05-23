@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const Banner = () => {
 	return (
 		<div className="lg:flex text-blue-950 bg-gradient-to-r from-cyan-100 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm text-center mr-2 mb-2">
-			<div className="w-full mx-auto lg:w-1/2 text-center lg:text-left">
+			<div className="w-full mx-auto lg:w-1/2 text-left">
 				<div className="p-5 lg:px-20 lg:pt-20">
 					<div className="text-2xl lg:text-6xl top-1/2 font-serif space-y-2">
 						<p className="text-base my-3">
 							Welcome To,{" "}
-							<span className="text-2xl ml-2  font-extrabold">joy</span>
+							<span className="text-2xl ml-2 font-extrabold">Joy</span>
 							Ride
 						</p>
 						Where Kids Rule the Roads of Fun
@@ -17,7 +17,7 @@ const Banner = () => {
 						<Link to="/about">
 							<button
 								type="button"
-								className="text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-sky-300 dark:focus:ring-sky-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+								className="text-white bg-gradient-to-r from-sky-500 via-sky-600 to-sky-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-sky-300 dark:focus:ring-sky-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center lg:mr-2 lg:mb-2"
 							>
 								About us
 							</button>

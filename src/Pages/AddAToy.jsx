@@ -54,13 +54,13 @@ const AddAToy = () => {
 		form.reset();
 	};
 	return (
-		<div className="border p-10 my-5 bg-cyan-900 rounded-lg text-white">
+		<div className="border p-5 lg:p-10 my-5 bg-cyan-950 rounded-lg text-white">
 			<h1 className="text-center text-xl lg:text-3xl font-serif font-extrabold mb-10">
 				Add a <span className="text-cyan-500">Toy</span>
 			</h1>
-			<form onSubmit={handleAddAToy} className="w-full px-20">
+			<form onSubmit={handleAddAToy} className="w-full px-5 lg:px-20">
 				<div className="flex flex-wrap -mx-3 mb-6">
-					<div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+					<div className="w-full px-3 md:w-1/2 mb-6 md:mb-0">
 						<label className="block uppercase tracking-wide text-white text-xs font-bold mb-2">
 							Seller Name
 						</label>
@@ -175,7 +175,7 @@ const AddAToy = () => {
 									<option>Sports Car</option>
 								</select>
 								<input
-									className="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm pt-2 pb-1 px-5 text-center"
+									className="text-white cursor-pointer bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm pt-2 pb-1 px-5 text-center"
 									type="submit"
 									value="Submit"
 								/>

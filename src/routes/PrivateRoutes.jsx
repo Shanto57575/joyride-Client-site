@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 
 const PrivateRoutes = ({ children }) => {
 	const { user, loading } = useContext(AuthContext);
-	console.log(loading);
+
 	const location = useLocation();
 
 	if (loading) {
@@ -42,8 +42,7 @@ const PrivateRoutes = ({ children }) => {
 
 	if (user) {
 		return children;
-	}
-	if (!user) {
+	} else {
 		Swal.fire({
 			icon: "error",
 			title: "Oops...",

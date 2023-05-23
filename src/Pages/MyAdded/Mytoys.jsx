@@ -9,10 +9,16 @@ const Mytoys = () => {
 	const { loading, user } = useContext(AuthContext);
 
 	const [cars, setCars] = useState([]);
+	const [asc, setAsc] = useState(true);
+
 	console.log(cars);
 
 	const loadData = () => {
-		fetch(`https://joyride-server-shanto57575.vercel.app/cars/${user?.email}`)
+		fetch(
+			`https://joyride-server-shanto57575.vercel.app/cars/${user?.email}?sort=${
+				asc ? "asc" : "desc"
+			}`
+		)
 			.then((res) => res.json())
 			.then((data) => setCars(data));
 	};
@@ -21,7 +27,7 @@ const Mytoys = () => {
 		if (!user?.email) return;
 		loadData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [user?.email]);
+	}, [user?.email, asc]);
 
 	const handleDelete = (_id) => {
 		console.log(_id);
@@ -85,7 +91,16 @@ const Mytoys = () => {
 		<div className="overflow-x-auto w-full">
 			<table className="table w-full">
 				<thead>
-					<tr className="text-center">
+					<>
+						<button
+							onClick={() => setAsc(!asc)}
+							type="button"
+							className="text-white ml-5 my-2 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+						>
+							{asc ? "Sort in Descending Price" : "Sort in Ascending Price "}
+						</button>
+					</>
+					<tr className="text-center text-cyan-200 ">
 						<th>Name</th>
 						<th>Toy Name</th>
 						<th>Category</th>
