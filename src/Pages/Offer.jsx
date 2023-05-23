@@ -5,13 +5,13 @@ const Offer = () => {
 			<h1 className="text-center font-serif text-5xl text-cyan-400">FAQ!!!</h1>
 
 			<div className="md:flex gap-10 md:gap-10 items-center">
-				<div className="w-full md:w-1/2">
-					<div className="">
+				<div className="w-full md:w-1/2 text-white font-bold">
+					<div>
 						<div tabIndex={0} className="collapse group my-5">
-							<div className="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-title bg-primary  group-focus:bg-secondary group-focus:text-secondary-content">
 								How can I place an order on your toy marketplace?
 							</div>
-							<div className="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-content bg-primary  group-focus:bg-secondary group-focus:text-secondary-content">
 								<p>
 									Placing an order is quick and easy! Simply browse our wide
 									range of toys, select the ones you wish to purchase, and add
@@ -23,10 +23,10 @@ const Offer = () => {
 							</div>
 						</div>
 						<div tabIndex={0} className="collapse group my-5">
-							<div className="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-title text-white font-bold bg-primary group-focus:bg-secondary group-focus:text-secondary-content">
 								What are the available payment options on your toy marketplace?
 							</div>
-							<div className="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-content bg-primary group-focus:bg-secondary group-focus:text-secondary-content">
 								<p>
 									We offer multiple secure payment options to ensure a
 									convenient shopping experience. You can pay for your toys
@@ -37,10 +37,10 @@ const Offer = () => {
 							</div>
 						</div>
 						<div tabIndex={0} className="collapse group my-5">
-							<div className="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-title bg-primary text-white font-bold group-focus:bg-secondary group-focus:text-secondary-content">
 								How long does it take to receive my order?
 							</div>
-							<div className="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-content bg-primary  group-focus:bg-secondary group-focus:text-secondary-content">
 								<p>
 									We understand that you're excited to receive your toys! Our
 									estimated delivery time varies depending on your location and
@@ -53,11 +53,11 @@ const Offer = () => {
 							</div>
 						</div>
 						<div tabIndex={0} className="collapse group my-5">
-							<div className="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-title bg-primary text-white font-bold group-focus:bg-secondary group-focus:text-secondary-content">
 								What is your return policy for toys purchased on your
 								marketplace?
 							</div>
-							<div className="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-content bg-primary  group-focus:bg-secondary group-focus:text-secondary-content">
 								<p>
 									We want you to be completely satisfied with your toy purchase.
 									If for any reason you're not happy with your order, we offer a
@@ -70,10 +70,10 @@ const Offer = () => {
 							</div>
 						</div>
 						<div tabIndex={0} className="collapse group my-5">
-							<div className="collapse-title bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-title bg-primary text-white font-bold group-focus:bg-secondary group-focus:text-secondary-content">
 								Are the toys on your marketplace safe for children?
 							</div>
-							<div className="collapse-content bg-primary text-primary-content group-focus:bg-secondary group-focus:text-secondary-content">
+							<div className="collapse-content bg-primary  group-focus:bg-secondary group-focus:text-secondary-content">
 								<p>
 									Absolutely! The safety of children is our utmost priority. We
 									ensure that all toys listed on our marketplace meet or exceed
@@ -90,8 +90,8 @@ const Offer = () => {
 				</div>
 				<div className="w-full md:w-1/2 rounded-lg">
 					<img
-						className="w-full py-5 md:p-7 mx-auto "
-						src="https://i.postimg.cc/jqJVSx0C/faq.jpg"
+						className="w-full py-5 md:p-7 mx-auto h-[450px]"
+						src="https://i.postimg.cc/7Y3rXfZZ/faq.jpg"
 						alt=""
 					/>
 				</div>
