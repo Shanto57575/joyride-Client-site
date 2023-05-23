@@ -14,6 +14,10 @@ Welcome to Joyride Toy Marketplace, a website built using React, Tailwind CSS, D
 
 ## Tools Used --
 
+- **Tailwind**
+
+- **Vite**
+
 - **DaisyUI**
 
 - **MongoDB**
