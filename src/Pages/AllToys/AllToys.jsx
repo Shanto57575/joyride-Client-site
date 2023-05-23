@@ -60,7 +60,7 @@ const AllToys = () => {
 					</tr>
 				</thead>
 				<tbody>
-					{cars.slice(0, 20).map((car) => (
+					{cars.map((car) => (
 						<ShowToy key={car._id} car={car}></ShowToy>
 					))}
 				</tbody>
